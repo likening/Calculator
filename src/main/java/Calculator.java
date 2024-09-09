@@ -105,6 +105,9 @@ public class Calculator {
             currentValue = initValue;
             return;
         }
+        /**
+         * 这里把历史记录重新计算，不能直接redo，因为存在精度问题
+         */
         currentValue = initValue;
         for (int i = 0; i < history.size(); i++) {
             Operation operation = history.get(i);
